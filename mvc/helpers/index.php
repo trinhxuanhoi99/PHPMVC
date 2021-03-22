@@ -6,3 +6,8 @@ if (!function_exists('view')) {
         echo $file;
     }
 }
+
+if (!function_exists('response')) {
+    header('Content-Type: application/json');
+    echo json_encode($data);
+}
