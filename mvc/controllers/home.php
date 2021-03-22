@@ -1,9 +1,6 @@
 <?php
 
-namespace App\Controller;
-
-use App\Core\Controller;
-use App\Models\SinhVienModel;
+require_once './mvc/models/SinhVienModel.php';
 
 class Home extends Controller
 {
@@ -11,7 +8,8 @@ class Home extends Controller
     {
         $sinhvien = new SinhVienModel();
         $data =  $sinhvien->GetSV();
-        return $this->response(['hoingao' => $data]);
+        // return $this->response($data);
+        return view('emails');
     }
 
     public static function show()

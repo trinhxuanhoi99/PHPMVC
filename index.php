@@ -1,9 +1,8 @@
 <?php
 
-use App\Core\App;
-
-require_once 'autoload.php';
-require_once './mvc/core/App.php';
+require_once './mvc/helpers/index.php';
+require_once './mvc/Bridge.php';
 
 session_start();
 $myapp = new App();
+
