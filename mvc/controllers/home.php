@@ -9,7 +9,7 @@ class Home extends Controller
         $sinhvien = new SinhVienModel();
         $data =  $sinhvien->GetSV();
         // return response($data);
-        return view('emails');
+        echo $data;
     }
 
     public static function show()
