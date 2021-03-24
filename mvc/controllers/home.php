@@ -1,7 +1,6 @@
 <?php
 
 require_once './mvc/models/SinhVienModel.php';
-
 class Home extends Controller
 {
     public function SayHi()
@@ -12,8 +11,16 @@ class Home extends Controller
         echo $data;
     }
 
-    public static function show()
+    public function show($a, $b)
     {
-        echo "home-show";
+        $sv = new SinhVienModel();
+        $sum = $sv->Tong($a, $b);
+        $sum = "Hội";
+        $content_parser = [
+            '{$hoi}' => $sum,
+            '{$s}' => $sv->GetSV(),
+        ];
+        // echo $sum;
+        return view('emails', $content_parser);
     }
 }

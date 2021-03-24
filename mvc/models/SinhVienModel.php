@@ -6,4 +6,7 @@ class SinhVienModel
     {
         return "Nguyen van teo";
     }
+    public function Tong($n, $m){
+        return $n+$m;
+    }
 }
