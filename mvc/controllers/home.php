@@ -15,7 +15,6 @@ class Home extends Controller
     {
         $sv = new SinhVienModel();
         $sum = $sv->Tong($a, $b);
-        $sum = "Hội";
         $content_parser = [
             '{$hoi}' => $sum,
             '{$s}' => $sv->GetSV(),
